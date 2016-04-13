@@ -1,128 +1,338 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src= "js/jquery-1.12.3.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Find a Coffee Shop</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>The Goldilocks Coffee Finder</h1>
-      <h3>Get the Coffee Experience That's Juuuuust Right!</h3>
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src= "js/jquery-1.12.3.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Find a Coffee Shop</title>
+</head>
+<body>
+  <div class="container">
+    <h1>The Goldilocks Coffee Finder</h1>
+    <h3>Get the Coffee Experience That's Juuuuust Right!</h3>
+    <br>
+    <h4>There are a LOT of coffee shops in Portland, but not all coffee experiences are created equal!  When you're looking for a shop, which one will you enjoy the most? We can help!  Answer the questions below and get a suggestion for your perfect coffee experience.</h5>
       <br>
-      <h4>There are a LOT of coffee shops in Portland, but not all coffee experiences are created equal!  When you're looking for a shop, which one will you enjoy the most? We can help!  Answer the questions below and get a suggestion for your perfect coffee experience.</h5>
-      <br>
-          <form id="collect">
+      <form id="collect">
 
-            <div class="drop-down">
-              <label for="ambience">Out of the following choices, which best describes the type of ambience you are looking for?</label>
-              <select class="form-control ambience">
-                <option disabled selected>Select Your Ambience:</option>
-                <option value="1">Lively and Bustling</option>
-                <option value="2">Friendly and Fun!</option>
-                <option value="3">Cozy and Intimate</option>
-                <option value="4">"Boutique" and Hip </option>
-              </select>
+        <div class="drop-down">
+          <label for="ambience">Out of the following choices, which best describes the type of ambience you are looking for?</label>
+          <select class="form-control ambience">
+            <option disabled selected>Select Your Ambience:</option>
+            <option value="1">Lively and Bustling</option>
+            <option value="2">Friendly and Fun!</option>
+            <option value="3">Cozy and Intimate</option>
+            <option value="4">"Boutique" and Hip </option>
+          </select>
+          <br>
+          <div class="radio">
+            <strong>How important is it that a shop is conveniently located and easy to find?</strong>
             <br>
-            <div class="radio">
-              <strong>How important is it that a shop is conveniently located and easy to find?</strong>
-              <br>
-              <label>
-                <input type="radio" name="convenient" value="1">Important
-              </label>
-              <br>
-              <label>
-                <input type="radio" name="convenience_unimportant" value="2">Not Important
-              </label>
-            </div>
+            <label>
+              <input type="radio" name="convenient" value="1">Important
+            </label>
             <br>
-            <div class="drop-down">
-              <label for="culinary art">How important is it to you that a shop sees coffee as a culinary art?</label>
-              <select class="form-control culinary art">
-                <option disabled selected>Select Your Answer:</option>
-                <option value="1">Essential!</option>
-                <option value="2">Could Go Either Way</option>
-                <option value="3">Who Cares?</option>
-              </select>
-            </div>
+            <label>
+              <input type="radio" name="convenience_unimportant" value="2">Not Important
+            </label>
+          </div>
+          <br>
+          <div class="drop-down">
+            <label for="culinary art">How important is it to you that a shop sees coffee as a culinary art?</label>
+            <select class="form-control culinary art">
+              <option disabled selected>Select Your Answer:</option>
+              <option value="1">Essential!</option>
+              <option value="2">Could Go Either Way</option>
+              <option value="3">Who Cares?</option>
+            </select>
+          </div>
+          <br>
+          <div class="radio">
+            <strong>When getting your favorite coffee drink, do you want it to taste the same each time you drink it?</strong>
             <br>
-            <div class="radio">
-              <strong>When getting your favorite coffee drink, do you want it to taste the same each time you drink it?</strong>
-              <br>
-              <label>
-                <input type="radio" name="consistent" value="1">Yes, I want consistency
-              </label>
-              <br>
-              <label>
-                <input type="radio" name="unique" value="2">No, I like a unique taste each time
-              </label>
-            </div>
+            <label>
+              <input type="radio" name="consistent" value="1">Yes, I want consistency
+            </label>
             <br>
-            <div class="drop-down">
-              <label for="wait">How long are you willing to wait for your barista to make your coffee drink?</label>
-              <select class="form-control wait">
-                <option disabled selected>Select Your Time Frame:</option>
-                <option value="1">Under 2 minutes</option>
-                <option value="2">Under 3 minutes</option>
-                <option value="3">Under 5 minutes</option>
-                <option value="4">I can wait</option>
-              </select>
-            </div>
+            <label>
+              <input type="radio" name="unique" value="2">No, I like a unique taste each time
+            </label>
+          </div>
+          <br>
+          <div class="drop-down">
+            <label for="wait">How long are you willing to wait for your barista to make your coffee drink?</label>
+            <select class="form-control wait">
+              <option disabled selected>Select Your Time Frame:</option>
+              <option value="1">Under 2 minutes</option>
+              <option value="2">Under 3 minutes</option>
+              <option value="3">Under 5 minutes</option>
+              <option value="4">I can wait</option>
+            </select>
+          </div>
+          <br>
+          <div class="radio">
+            <strong>Do you want your coffee shop to have a Wi-Fi network?</strong>
             <br>
-            <div class="radio">
-              <strong>Do you want your coffee shop to have a Wi-Fi network?</strong>
-              <br>
-              <label>
-                <input type="radio" name="wifi" value="1">Absolutely
-              </label>
-              <br>
-              <label>
-                <input type="radio" name="no wifi" value="2">Doesn't matter
-              </label>
-            </div>
+            <label>
+              <input type="radio" name="wifi" value="1">Absolutely
+            </label>
             <br>
-            <div class="drop-down">
-              <label for="price">How much are you willing to pay for your coffee drink?</label>
-              <select class="form-control price">
-                <option disabled selected>Select Your Price Range:</option>
-                <option value="1">$</option>
-                <option value="2">$$</option>
-                <option value="3">$$$</option>
-                <option value="4">The sky's the limit</option>
-              </select>
-            </div>
+            <label>
+              <input type="radio" name="no wifi" value="2">Doesn't matter
+            </label>
+          </div>
+          <br>
+          <div class="drop-down">
+            <label for="price">How much are you willing to pay for your coffee drink?</label>
+            <select class="form-control price">
+              <option disabled selected>Select Your Price Range:</option>
+              <option value="1">$</option>
+              <option value="2">$$</option>
+              <option value="3">$$$</option>
+              <option value="4">The sky's the limit</option>
+            </select>
+          </div>
+          <br>
+          <div class="radio">
+            <strong>Would you ever put caramel, vanilla, pumpkin spice, or other such flavorings in your coffee?</strong>
             <br>
-            <div class="radio">
-              <strong>Would you ever put caramel, vanilla, pumpkin spice, or other such flavorings in your coffee?</strong>
-              <br>
-              <label>
-                <input type="radio" name="flavoring" value="1">Bring em on!
-              </label>
-              <br>
-              <label>
-                <input type="radio" name="no flavoring" value="2">Never ever!
-              </label>
-            </div>
+            <label>
+              <input type="radio" name="flavoring" value="1">Bring em on!
+            </label>
             <br>
-            <div class="drop-down">
-              <label for="location">Where in Portland do you want to enjoy your coffee?</label>
-              <select class="form-control location">
-                <option disabled selected>Select Your Location:</option>
-                <option value="1">Northwest Portland</option>
-                <option value="2">Northeast Portland</option>
-                <option value="3">Southwest Portland</option>
-                <option value="4">Southeast Portland</option>
-                <option value="4">North Portland/Vancouver</option>
-              </select>
+            <label>
+              <input type="radio" name="no flavoring" value="2">Never ever!
+            </label>
+          </div>
+          <br>
+          <div class="drop-down">
+            <label for="location">Where in Portland do you want to enjoy your coffee?</label>
+            <select class="form-control location">
+              <option disabled selected>Select Your Location:</option>
+              <option value="1">Northwest Portland</option>
+              <option value="2">Northeast Portland</option>
+              <option value="3">Southwest Portland</option>
+              <option value="4">Southeast Portland</option>
+              <option value="4">North Portland/Vancouver</option>
+            </select>
+          </div>
+          <br>
+          <br>
+          <button type="submit">Our Recommendation</button>
+          <div id="output">
+            <h2>We Recommend:</h2>
+            <br>
+            <div class=coffee_shop id="starbucksNE">
+              <img src="img/starbucks.jpg" alt="Photo of StarbucksNE">
+              <br>
+              <br>
+              <p>Starbucks Northeast</p>
+              <p class ="address"> 525 NE Grand Avenue (503) 231-2793 <a href="http://www.starbucks.com/store-locator/search/location/525%20ne%20grand/detail/18323/">starbucks.com</a></p>
+              <p>Seattle-based coffeehouse chain known for its signature roasts, light bites and WiFi availability.
+              </p>
             </div>
-          </form>
-        </div>
+
+            <div class=coffee_shop id="starbucksSE">
+              <img src="img/starbucks.jpg" alt="Photo of StarbucksSE">
+              <br>
+              <br>
+              <p>Starbucks Southeast</p>
+              <p class ="address"> 7001 SE Milwaukie Avenue (503) 230-9603 <a href="http://www.starbucks.com/store-locator/search/location/7001%20se%20milwaukie%20avenue/detail/15239">starbucks.com</a></p>
+              <p>Seattle-based coffeehouse chain known for its signature roasts, light bites and WiFi availability.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="starbucksNW">
+              <img src="img/starbucks.jpg" alt="Photo of StarbucksNW">
+              <br>
+              <br>
+              <p>Starbucks Northwest</p>
+              <p class ="address"> 1301 NW 23rd Avenue (503) 227-2038 <a href="http://www.starbucks.com/store-locator/search/location/1301%20Northwest%2023rd%20Avenue%2C%20Portland%2C%20OR%2C%20United%20States/detail/16874">starbucks.com</a></p>
+              <p>Seattle-based coffeehouse chain known for its signature roasts, light bites and WiFi availability.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="starbucksSW">
+              <img src="img/starbucks.jpg" alt="Photo of StarbucksSW">
+              <br>
+              <br>
+              <p>Starbucks Southwest</p>
+              <p class ="address"> 720 SW Broadway (503) 223-2488 <a href="http://www.starbucks.com/store-locator/search/location/720%20sw%20broadway%2C%20portland%2C%20or%2097205/detail/9082">starbucks.com</a></p>
+              <p>Seattle-based coffeehouse chain known for its signature roasts, light bites and WiFi availability.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="starbucksN">
+              <img src="img/starbucks.jpg" alt="Photo of StarbucksN">
+              <br>
+              <br>
+              <p>Starbucks North</p>
+              <p class ="address"> 8539 N Lombard Street (503) 240-2700 <a href="http://www.starbucks.com/store-locator/search/location/8539%20N%20Lombard%20Street%20/detail/15240">starbucks.com</a></p>
+              <p>Seattle-based coffeehouse chain known for its signature roasts, light bites and WiFi availability.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="dutchbrosNE">
+              <img src="img/dutch-bros.jpg" alt="Photo of Dutch BrothersNE">
+              <br>
+              <br>
+              <p>Dutch Brothers Northeast</p>
+              <p class ="address"> 4721 NE Columbia Boulevard (503) 282-0029<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
+              <p>Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="dutchbrosSE">
+              <img src="img/dutch-bros.jpg" alt="Photo of Dutch BrothersSE">
+              <br>
+              <br>
+              <p>Dutch Brothers Southeast</p>
+              <p class ="address"> 514 SE Belmont Street<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
+              <p>Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="dutchbrosNW">
+              <img src="img/dutch-bros.jpg" alt="Photo of Dutch BrothersNW">
+              <br>
+              <br>
+              <p>Dutch Brothers Northwest</p>
+              <p class ="address"> 2110 NW 23rd Avenue (503) 889-0122<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
+              <br>
+              <p>Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="dutchbrosSW">
+              <img src="img/dutch-bros.jpg" alt="Photo of Dutch BrothersSW">
+              <br>
+              <br>
+              <p>Dutch Brothers Southwest</p>
+              <p class ="address"> 5852 SW Beaverton Hillsdale Highway (503) 244-7285<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
+              <p>Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="dutchbrosN">
+              <img src="img/dutch-bros.jpg" alt="Photo of Dutch BrothersN">
+              <br>
+              <br>
+              <p>Dutch Brothers North</p>
+              <p class ="address"> 5700 E 4th Plain Boulevard <a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
+              <p>Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="woodlawn">
+              <img src="img/woodlawn-coffee.jpg" alt="Photo of Woodlawn Coffee and Pastry">
+              <br>
+              <br>
+              <p>Woodlawn Coffee and Pastry</p>
+              <p class ="address">  808 NE Dekum Street (503) 954-2412<a href="http://www.woodlawncoffee.com/"> woodlawncoffee.com</a></p>
+              <br>
+              <p>Cozy coffeehouse and bakery using seasonal, organic ingredients to make savory and sweet meals all day.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="barista">
+              <img src="img/barista.jpg" alt="Photo of Barista">
+              <br>
+              <br>
+              <p>Barista</p>
+              <p class ="address"> 1725 NE Alberta Street (503) 208-2568<a href="http://www.baristapdx.com/"> baristapdx.com</a></p>
+              <br>
+              <p>Laid-back outpost offers carefully presented coffee drinks and selection of pastries in a quirky room.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="freshpot">
+              <img src="img/the-fresh-pot.jpg" alt="Photo of The Fresh Pot">
+              <br>
+              <br>
+              <p>The Fresh Pot</p>
+              <p class ="address"> 3729 SE Hawthorne Boulevard (503) 232-8928<a href="http://www.thefreshpot.com/"> thefreshpot.com</a></p>
+              <p>Quaint cafe branch of a mini-chain featuring loose-leaf teas, WiFi, a small library and local roasts.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="eitheror">
+              <img src="img/either-or.jpg" alt="Photo of Either/Or">
+              <br>
+              <br>
+              <p>Either/Or</p>
+              <p class ="address"> 8235 SE 13th Avenue (503)235-3474<a href=""> </a></p>
+              <p>Bright, cheery space presenting locally roasted coffee, espresso flights, handmade sodas and pastries.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="dragonfly">
+              <img src="img/dragonfly-coffee.jpg" alt="Photo of Dragonfly">
+              <br>
+              <br>
+              <p>The Dragonfly Coffee House</p>
+              <p class ="address"> 2387 NW Thurman Street (503) 224-7888<a href="http://thedragonflycoffeehouse.com/"> thedragonflycoffeehouse.com</a></p>
+              <p>Cozy, open-early spot pairing its brews with pastries and more in a low-key space with plush seating.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="sterling">
+              <img src="img/sterling-coffee.jpg" alt="Photo of Sterling Coffee">
+              <br>
+              <br>
+              <p>Sterling Coffee Roasters</p>
+              <p class ="address"> 417 NW 21st Avenue (503) 248-2133<a href="http://www.sterling.coffee/"> sterlingcoffee.com</a></p>
+              <p>Chipper coffeehouse featuring small-batch java and other items in classic surroundings.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="fehrenbacher">
+              <img src="img/fehrenbacher-hof.jpg" alt="Photo of Fehrenbacher Hof">
+              <br>
+              <br>
+              <p>Fehrenbacher Hof</p>
+              <p class ="address"> 1225 SW 19th Avenue (503) 223-4493<a href="http://goosehollowinn.com/Fehrenbacher%20Hof.html"> goosehollowinn.com</a></p>
+              <p>Family-run coffeehouse offers breakfast sandwiches and homey touches like plush chairs and chess tables.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="heart">
+              <img src="img/heart-coffee.jpg" alt="Photo of Heart">
+              <br>
+              <br>
+              <p>Heart Coffee</p>
+              <p class ="address"> 537 SW 12th Avenue (503) 224-0036<a href="http://www.heartroasters.com/"> heartroasters.com</a></p>
+              <p>Coffee drinks and gourmet baked goods offered in stylish, industrial-chic quarters.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="annabannanas">
+              <img src="img/anna-bannanas.jpg" alt="Photo of Anna Bannanas">
+              <br>
+              <br>
+              <p>Anna Bannanas Cafe</p>
+              <p class ="address"> 8716 N Lombard Street (503) 286-2030<a href="http://annabannanascafe.com/"> annabannanascafe.com</a></p>
+              <p>Laid-back outlet of a local chain cafe with light breakfast and lunch options, plus outdoor seating.
+              </p>
+            </div>
+
+            <div class=coffee_shop id="cathedral">
+              <img src="img/cathedral-coffee.jpg" alt="Photo of Cathedral">
+              <br>
+              <br>
+              <p>Cathedral Coffee</p>
+              <p class ="address"> 7530 N Willamette Boulevard (503) 935-4312<a href="http://www.cathedralcoffee.com/"> cathedralcoffee.com</a></p>
+              <p>Coffeehouse beverages and baked goods in an eclectic cafe with local art and occasional live music.
+              </p>
+            </div>
+
+          </div>
+        </form>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
