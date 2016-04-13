@@ -1,0 +1,26 @@
+.address{
+  font-style: italic;
+  font-size: medium;
+
+}
+
+p{
+    margin-right: 300px;
+    font size: medium;
+
+
+}
+h4{
+  margin-bottom: 0;
+
+}
+
+.jumbotron{
+  padding-left: 10%;
+  background-image: url("");
+
+ }
+
+#line-two {
+  float: right;
+}
