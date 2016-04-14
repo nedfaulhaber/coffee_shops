@@ -6,22 +6,22 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
     <script src= "js/jquery-1.12.3.js"></script>
     <script src="js/scripts.js"></script>
     <title>Find a Coffee Shop</title>
   </head>
 
   <body>
-    <div class="container" id="goldilocks">
+    <div id="goldilocks">
       <h1>The Goldilocks Coffee Finder</h1>
       <h3 id="line-two">Get the Coffee Experience That's Juuuuust Right</h3>
-    </div>
+
 
     <div class="container">
-      <br>
       <h4>There are a LOT of coffee shops in Portland, but not all coffee experiences are created equal!  When you're looking for a shop, which one will you enjoy the most? We can help!  Answer the questions below and get a suggestion for your perfect coffee experience.</h4>
       <br>
-      <form id="collect">
+      <form id="collect" class="col-sm-5">
 
         <div class="drop-down">
           <label for="ambience">Out of the following choices, which best describes the type of ambience you are looking for?</label>
@@ -47,6 +47,7 @@
           </label>
         </div>
         <br>
+        <br>
 
         <div class="drop-down">
           <label for="culinary">How important is it to you that a shop sees coffee as a culinary art?</label>
@@ -70,6 +71,7 @@
             <input type="radio" name="consistent" value="2">No, I like a unique taste each time
           </label>
         </div>
+        <br>
         <br>
 
         <div class="drop-down">
@@ -96,7 +98,7 @@
           </label>
         </div>
         <br>
-
+        <br>
         <div class="drop-down">
           <label for="price">How much are you willing to pay for your coffee drink?</label>
           <select class="form-control" id="price">
@@ -121,16 +123,17 @@
           </label>
         </div>
         <br>
+        <br>
 
         <div class="drop-down">
           <label for="location">Where in Portland do you want to enjoy your coffee?</label>
           <select class="form-control" id="location">
             <option disabled selected>Select Your Location:</option>
-            <option value="1">Northwest Portland</option>
-            <option value="2">Northeast Portland</option>
-            <option value="3">Southwest Portland</option>
-            <option value="4">Southeast Portland</option>
-            <option value="4">North Portland/Vancouver</option>
+            <option value="NW">Northwest Portland</option>
+            <option value="NE">Northeast Portland</option>
+            <option value="SW">Southwest Portland</option>
+            <option value="SE">Southeast Portland</option>
+            <option value="N">North Portland/Vancouver</option>
           </select>
         </div>
         <br>
@@ -139,11 +142,13 @@
         <button type="submit">Our Recommendation</button>
 
       </form>
+    </div>  <!-- end form container -->
 
+    <div class="container">
       <div id="output">
         <h2>We Recommend:</h2>
         <br>
-        <div class=coffee_shop id="starbucksNE">
+        <div class="coffee_shop" id="starbucksNE">
           <img src="img/starbucks.jpg" alt="Photo of StarbucksNE">
           <br>
           <br>
@@ -153,7 +158,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="starbucksSE">
+        <div class="coffee_shop" id="starbucksSE">
           <img src="img/starbucks.jpg" alt="Photo of StarbucksSE">
           <br>
           <br>
@@ -163,7 +168,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="starbucksNW">
+        <div class="coffee_shop" id="starbucksNW">
           <img src="img/starbucks.jpg" alt="Photo of StarbucksNW">
           <br>
           <br>
@@ -173,7 +178,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="starbucksSW">
+        <div class="coffee_shop" id="starbucksSW">
           <img src="img/starbucks.jpg" alt="Photo of StarbucksSW">
           <br>
           <br>
@@ -183,7 +188,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="starbucksN">
+        <div class="coffee_shop" id="starbucksN">
           <img src="img/starbucks.jpg" alt="Photo of StarbucksN">
           <br>
           <br>
@@ -193,58 +198,58 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="dutchbrosNE">
-          <img src="img/dutch-bros.jpg" alt="Photo of Dutch BrothersNE">
+        <div class="coffee_shop" id="dutchbrosNE">
+          <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.NE">
           <br>
           <br>
-          <h4>Dutch Brothers Northeast</h4>
+          <h4>Dutch Bros.</h4>
           <p class ="address"> 4721 NE Columbia Boulevard (503) 282-0029<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
           <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
           </p>
         </div>
 
-        <div class=coffee_shop id="dutchbrosSE">
-          <img src="img/dutch-bros.jpg" alt="Photo of Dutch BrothersSE">
+        <div class="coffee_shop" id="dutchbrosSE">
+          <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.SE">
           <br>
           <br>
-          <h4>Dutch Brothers Southeast</h4>
+          <h4>Dutch Bros.</h4>
           <p class ="address"> 514 SE Belmont Street<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
           <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
           </p>
         </div>
 
-        <div class=coffee_shop id="dutchbrosNW">
-          <img src="img/dutch-bros.jpg" alt="Photo of Dutch BrothersNW">
+        <div class="coffee_shop" id="dutchbrosNW">
+          <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.NW">
           <br>
           <br>
-          <h4>Dutch Brothers Northwest</h4>
+          <h4>Dutch Bros.</h4>
           <p class ="address"> 2110 NW 23rd Avenue (503) 889-0122<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
           <br>
           <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
           </p>
         </div>
 
-        <div class=coffee_shop id="dutchbrosSW">
-          <img src="img/dutch-bros.jpg" alt="Photo of Dutch BrothersSW">
+        <div class="coffee_shop" id="dutchbrosSW">
+          <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.SW">
           <br>
           <br>
-          <h4>Dutch Brothers Southwest</h4>
+          <h4>Dutch Bros.</h4>
           <p class ="address"> 5852 SW Beaverton Hillsdale Highway (503) 244-7285<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
           <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
           </p>
         </div>
 
-        <div class=coffee_shop id="dutchbrosN">
-          <img src="img/dutch-bros.jpg" alt="Photo of Dutch BrothersN">
+        <div class="coffee_shop" id="dutchbrosN">
+          <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.N">
           <br>
           <br>
-          <h4>Dutch Brothers North</h4>
+          <h4>Dutch Bros.</h4>
           <p class ="address"> 5700 E 4th Plain Boulevard <a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
           <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the “Dutch Mafia”, who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It’s not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It’s a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.
           </p>
         </div>
 
-        <div class=coffee_shop id="woodlawn">
+        <div class="coffee_shop" id="woodlawn">
           <img src="img/woodlawn-coffee.jpg" alt="Photo of Woodlawn Coffee and Pastry">
           <br>
           <br>
@@ -254,7 +259,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="barista">
+        <div class="coffee_shop" id="barista">
           <img src="img/barista.jpg" alt="Photo of Barista">
           <br>
           <br>
@@ -267,7 +272,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="freshpot">
+        <div class="coffee_shop" id="freshpot">
           <img src="img/the-fresh-pot.jpg" alt="Photo of The Fresh Pot">
           <br>
           <br>
@@ -277,7 +282,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="eitheror">
+        <div class="coffee_shop" id="eitheror">
           <img src="img/either-or.jpg" alt="Photo of Either/Or">
           <br>
           <br>
@@ -287,7 +292,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="dragonfly">
+        <div class="coffee_shop" id="dragonfly">
           <img src="img/dragonfly-coffee.jpg" alt="Photo of Dragonfly">
           <br>
           <br>
@@ -297,7 +302,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="sterling">
+        <div class="coffee_shop" id="sterling">
           <img src="img/sterling-coffee.jpg" alt="Photo of Sterling Coffee">
           <br>
           <br>
@@ -307,7 +312,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="fehrenbacher">
+        <div class="coffee_shop" id="fehrenbacher">
           <img src="img/fehrenbacher-hof.jpg" alt="Photo of Fehrenbacher Hof">
           <br>
           <br>
@@ -317,7 +322,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="heart">
+        <div class="coffee_shop" id="heart">
           <img src="img/heart-coffee.jpg" alt="Photo of Heart">
           <br>
           <br>
@@ -327,7 +332,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="annabannanas">
+        <div class="coffee_shop" id="annabannanas">
           <img src="img/anna-bannanas.jpg" alt="Photo of Anna Bannanas">
           <br>
           <br>
@@ -337,7 +342,7 @@
           </p>
         </div>
 
-        <div class=coffee_shop id="cathedral">
+        <div class="coffee_shop" id="cathedral">
           <img src="img/cathedral-coffee.jpg" alt="Photo of Cathedral">
           <br>
           <br>
@@ -349,6 +354,6 @@
 
       </div>  <!-- end output section -->
 
-    </div>  <!-- end container -->
+    </div>  <!-- end output container -->
   </body>
 </html>

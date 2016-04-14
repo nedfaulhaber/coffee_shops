@@ -183,6 +183,10 @@ console.log(highestCount);
   });
 console.log(outputStores);
 
+$("#output").fadeIn();
+$("form#collect").fadeOut();
+
+
 
 // these 9 loops check for matching between user properties and coffeshop properties and increments the "count" property for the coffeeshop that macthes
     // newFulls.compile.forEach(function(newFull){

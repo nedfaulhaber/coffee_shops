@@ -11,7 +11,14 @@ p{
 
 }
 h4{
-  margin-bottom: 0;
+
+float: right;
+  margin: 45px;
+  padding-top: 20px;
+    color: #cc5200;
+    font-family: Yanone Kaffeesatz;
+    font-size: 18pt;
+
 
 }
 
@@ -28,10 +35,59 @@ body {
 
 h1 {
   font-size: 50px;
+text-align: center;
 }
 
 #goldilocks {
-  background-image: url(../img/milk_heart.jpeg);
-  /*background-size: cover;*/
+  background-image: url(../img/latte_art.gif);
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: left;
 
+
+
+
+}
+#output {
+  display: none;
+  -webkit-transition-duration: 20s; /* Safari */
+  transition-duration: 20s;
+}
+
+#collect{
+
+  -webkit-transition-duration: 20s; /* Safari */
+transition-duration: 20s;
+}
+
+.form-control {
+  color: #black;
+  opacity: 0.4;
+    filter: alpha(opacity=40);
+    width: 50%;
+}
+
+.radio {
+  color: white;
+}
+
+label {
+  color: #cc5200;
+  float: left;
+
+}
+
+col-sm-3 {
+  float: left;
+}
+
+strong {
+  color: #cc5200;
+
+}
+
+input[type=radio] {
+  color: #cc5200;
+  opacity: 0.4;
+    filter: alpha(opacity=40);
 }
