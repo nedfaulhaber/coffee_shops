@@ -1,32 +1,62 @@
+
+
+#goldilocks {
+  background-image: url(../img/latte_art.gif);
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: #1a0a00;
+  box-shadow: 10px 0px 10px 10px #1a0a00;
+}
+
+h3 {
+  /*float: left;*/
+  /*margin: 45px;
+  padding-top: 20px;*/
+  color: #cc5200;
+  font-family: Yanone Kaffeesatz;
+  font-size: 24pt;
+  padding-left: 8%;
+  text-shadow: 2px 2px white;
+}
+
+#line-two {
+  padding-left: 5px;
+  padding-top: 20px;
+  color: #cc5200;
+  font-family: Yanone Kaffeesatz;
+  font-size: 30pt;
+}
+
+
 .address{
   font-style: italic;
   font-size: medium;
 
 }
 
-p{
-    margin-right: 300px;
-    font size: medium;
-
-
-}
-h4{
-
-float: right;
-  margin: 45px;
-  padding-top: 20px;
-    color: #cc5200;
-    font-family: Yanone Kaffeesatz;
-    font-size: 18pt;
-
-
-}
-
 body {
-    background-image: url(../img/portafilter.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-  }
+  background-image: url(../img/portafilter.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+p{
+  padding-left: 8%;
+  font size: 20px;
+  color: white;
+}
+
+#output h2{
+  color: white;
+  font-family: "Slabo 27px", serif;
+}
+#output h4{
+  padding-left: 8%;
+  color: #cc5200;
+  font-family: Yanone Kaffeesatz;
+  font-size: 24pt;
+}
 
 #line-two {
   float: right;
@@ -35,40 +65,40 @@ body {
 
 h1 {
   font-size: 50px;
-text-align: center;
-}
-
-#goldilocks {
-  background-image: url(../img/latte_art.gif);
-  height: 150px;
-  background-repeat: no-repeat;
-  background-position: left;
-
-
-
+  text-align: center;
 
 }
+
 #output {
   display: none;
-  -webkit-transition-duration: 20s; /* Safari */
-  transition-duration: 20s;
+  background-image: url(../img/beans.jpg);
+  padding: 55px;
+
+}
+
+#output img {
+  display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#output h2 {
+  text-align: center;
+}
+#collect {
+  /*transition-duration: 50s;*/
+  transition: opacity 0.5s;
 }
 
 .coffee_shop {
   display: none;
 }
 
-#collect{
-
-  -webkit-transition-duration: 20s; /* Safari */
-transition-duration: 20s;
-}
-
 .form-control {
   color: #black;
   opacity: 0.4;
-    filter: alpha(opacity=40);
-    width: 50%;
+  filter: alpha(opacity=40);
+  width: 50%;
 }
 
 .radio {
@@ -79,11 +109,12 @@ label {
   color: #cc5200;
   float: left;
 
+
 }
 
-col-sm-3 {
+/*.col-sm-5 {
   float: left;
-}
+}*/
 
 strong {
   color: #cc5200;

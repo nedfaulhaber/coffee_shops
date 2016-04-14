@@ -190,9 +190,13 @@ console.log(highestCount);
   });
 console.log(outputStores);
 
-    $("#output").show();
-    $("#collect").hide();
 
+
+
+    $("#collect").slideUp("slow");
+        $("#goldilocks").fadeOut(); 
+
+    $("#output").fadeIn("slow");
 
     // if (outputStores[0] === "Starbucks"){
     //   $("#starbucksNE").show()
