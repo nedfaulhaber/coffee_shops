@@ -10,6 +10,139 @@
     <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
     <script src= "js/jquery-1.12.3.js"></script>
     <script src="js/scripts.js"></script>
+
+    <script>
+      function initMap() {
+        var starNE = {lat: 45.527167, lng: -122.660883 };
+        var starSE = {lat: 45.473827, lng: -122.648861};
+        var starNW = {lat: 45.532318, lng: -122.698902};
+        var starSW = {lat: 45.519321, lng: -122.679492};
+        var starN = {lat: 45.586074, lng: -122.737708};
+        var dutchNE = {lat: 45.570870, lng: -122.613234};
+        var dutchSE = {lat: 45.516627, lng: -122.660534};
+        var dutchNW = {lat: 45.537871, lng: -122.698943};
+        var dutchSW = {lat: 45.487101, lng: -122.733248};
+        var dutchN = {lat: 45.642658, lng: -122.613349};
+        var woodl = {lat: 45.571734, lng: -122.657110};
+        var baris = {lat: 45.559380, lng: -122.647319};
+        var fresh = {lat: 45.512393, lng: -122.625209};
+        var eithe = {lat: 45.463367, lng: -122.653397};
+        var drago = {lat: 45.535829, lng: -122.700637};
+        var sterl = {lat: 45.526105, lng: -122.694734};
+        var fehre = {lat: 45.518762, lng: -122.693780};
+        var heart = {lat: 45.521644, lng: -122.683929};
+        var annab = {lat: 45.590872, lng: -122.755716};
+        var cathe = {lat: 45.584286, lng: -122.746303};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat:  45.559380, lng: -122.647319},
+          zoom: 11
+        });
+        var marker = new google.maps.Marker({
+          position: starNE,
+          map: map,
+          title: "Starbucks NE"
+        });
+        var marker = new google.maps.Marker({
+          position: starSE,
+          map: map,
+          title: "Starbucks SE"
+        });
+        var marker = new google.maps.Marker({
+          position: starNW,
+          map: map,
+          title: "Starbucks NW"
+        });
+        var marker = new google.maps.Marker({
+          position: starSW,
+          map: map,
+          title: "Starbucks SW"
+        });
+        var marker = new google.maps.Marker({
+          position: starN,
+          map: map,
+          title: "Starbucks N"
+        });
+        var marker = new google.maps.Marker({
+          position: dutchNE,
+          map: map,
+          title: "Dutch Brothers NE"
+        });
+        var marker = new google.maps.Marker({
+          position: dutchSE,
+          map: map,
+          title: "Dutch Brothers SE"
+        });
+        var marker = new google.maps.Marker({
+          position: dutchNW,
+          map: map,
+          title: "Dutch Brothers NW"
+        });
+        var marker = new google.maps.Marker({
+          position: dutchSW,
+          map: map,
+          title: "Dutch Brothers SW"
+        });
+        var marker = new google.maps.Marker({
+          position: dutchN,
+          map: map,
+          title: "Dutch Brothers N"
+        });
+        var marker = new google.maps.Marker({
+          position: woodl,
+          map: map,
+          title: "Woodlawn"
+        });
+        var marker = new google.maps.Marker({
+          position: baris,
+          map: map,
+          title: "Barista"
+        });
+        var marker = new google.maps.Marker({
+          position: fresh,
+          map: map,
+          title: "Fresh Pot"
+        });
+        var marker = new google.maps.Marker({
+          position: eithe,
+          map: map,
+          title: "Either/Or"
+        });
+        var marker = new google.maps.Marker({
+          position: drago,
+          map: map,
+          title: "Dragon Fly"
+        });
+        var marker = new google.maps.Marker({
+          position: sterl,
+          map: map,
+          title: "Sterling"
+        });
+        var marker = new google.maps.Marker({
+          position:fehre,
+          map: map,
+          title: "Fehrenbacher Hof"
+        });
+        var marker = new google.maps.Marker({
+          position: heart,
+          map: map,
+          title: "Heart Roasters"
+        });
+        var marker = new google.maps.Marker({
+          position: annab,
+          map: map,
+          title: "Anna Bannanas"
+        });
+        var marker = new google.maps.Marker({
+          position: cathe,
+          map: map,
+          title: "Cathedral"
+        });
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+
     <title>Find a Coffee Shop</title>
   </head>
 
@@ -21,6 +154,7 @@
     </div>
     <br>
     <br>
+
     <h3>There are a LOT of coffee shops in Portland - which is best for you? Answer the questions below and find out...</h3>
     <div class="container">
       <br>
@@ -103,6 +237,7 @@
         </div>
         <br>
         <br>
+
         <div class="drop-down">
           <label for="price">How much are you willing to pay for your coffee drink?</label>
           <select class="form-control" id="price">
@@ -148,239 +283,236 @@
       </form>
     </div>  <!-- end form container -->
 
-
-      <div id="output">
-        <h2>We Recommend:</h2>
-        <br>
-        <div class="container">
-          <div class="coffee_shop" id="StarbucksNE">
-            <img src="img/starbucks.jpg" alt="Photo of StarbucksNE">
-            <br>
-            <br>
-            <h4>Starbucks</h4>
-            <p class ="address"> 525 NE Grand Avenue (503) 231-2793 <a href="http://www.starbucks.com/store-locator/search/location/525%20ne%20grand/detail/18323/">starbucks.com</a></p>
-            <p>The Seattle-based, omnipresent coffeehouse chain can be credited with starting the trend in the US towards the Italian-style cafe with espresso drinks, way back in 1983. Since that time, there are over 26,000 of these shops around the world, so if consistency is what you are looking for, you will get it at Starbucks, and it will not be hard to find one close by. If you like to dress up your espresso, this is your place, with caramel, whip cream, peppermint, pumpkin, chocolate, and more ready to tantalize your taste buds. When it comes to lavish, decadent lattes, nobody really competes with Starbucks.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="StarbucksSE">
-            <img src="img/starbucks.jpg" alt="Photo of StarbucksSE">
-            <br>
-            <br>
-            <h4>Starbucks</h4>
-            <p class ="address"> 7001 SE Milwaukie Avenue (503) 230-9603 <a href="http://www.starbucks.com/store-locator/search/location/7001%20se%20milwaukie%20avenue/detail/15239">starbucks.com</a></p>
-            <p>The Seattle-based, omnipresent coffeehouse chain can be credited with starting the trend in the US towards the Italian-style cafe with espresso drinks, way back in 1983. Since that time, there are over 26,000 of these shops around the world, so if consistency is what you are looking for, you will get it at Starbucks, and it will not be hard to find one close by. If you like to dress up your espresso, this is your place, with caramel, whip cream, peppermint, pumpkin, chocolate, and more ready to tantalize your taste buds. When it comes to lavish, decadent lattes, nobody really competes with Starbucks.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="StarbucksNW">
-            <img src="img/starbucks.jpg" alt="Photo of StarbucksNW">
-            <br>
-            <br>
-            <h4>Starbucks</h4>
-            <p class ="address"> 1301 NW 23rd Avenue (503) 227-2038 <a href="http://www.starbucks.com/store-locator/search/location/1301%20Northwest%2023rd%20Avenue%2C%20Portland%2C%20OR%2C%20United%20States/detail/16874">starbucks.com</a></p>
-            <p>The Seattle-based, omnipresent coffeehouse chain can be credited with starting the trend in the US towards the Italian-style cafe with espresso drinks, way back in 1983. Since that time, there are over 26,000 of these shops around the world, so if consistency is what you are looking for, you will get it at Starbucks, and it will not be hard to find one close by. If you like to dress up your espresso, this is your place, with caramel, whip cream, peppermint, pumpkin, chocolate, and more ready to tantalize your taste buds. When it comes to lavish, decadent lattes, nobody really competes with Starbucks.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="StarbucksSW">
-            <img src="img/starbucks.jpg" alt="Photo of StarbucksSW">
-            <br>
-            <br>
-            <h4>Starbucks</h4>
-            <p class ="address"> 720 SW Broadway (503) 223-2488 <a href="http://www.starbucks.com/store-locator/search/location/720%20sw%20broadway%2C%20portland%2C%20or%2097205/detail/9082">starbucks.com</a></p>
-            <p>The Seattle-based, omnipresent coffeehouse chain can be credited with starting the trend in the US towards the Italian-style cafe with espresso drinks, way back in 1983. Since that time, there are over 26,000 of these shops around the world, so if consistency is what you are looking for, you will get it at Starbucks, and it will not be hard to find one close by. If you like to dress up your espresso, this is your place, with caramel, whip cream, peppermint, pumpkin, chocolate, and more ready to tantalize your taste buds. When it comes to lavish, decadent lattes, nobody really competes with Starbucks.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="StarbucksN">
-            <img src="img/starbucks.jpg" alt="Photo of StarbucksN">
-            <br>
-            <br>
-            <h4>Starbucks</h4>
-            <p class ="address"> 8539 N Lombard Street (503) 240-2700 <a href="http://www.starbucks.com/store-locator/search/location/8539%20N%20Lombard%20Street%20/detail/15240">starbucks.com</a></p>
-            <p>The Seattle-based, omnipresent coffeehouse chain can be credited with starting the trend in the US towards the Italian-style cafe with espresso drinks, way back in 1983. Since that time, there are over 26,000 of these shops around the world, so if consistency is what you are looking for, you will get it at Starbucks, and it will not be hard to find one close by. If you like to dress up your espresso, this is your place, with caramel, whip cream, peppermint, pumpkin, chocolate, and more ready to tantalize your taste buds. When it comes to lavish, decadent lattes, nobody really competes with Starbucks.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="DutchBrosNE">
-            <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.NE">
-            <br>
-            <br>
-            <h4>Dutch Bros.</h4>
-            <p class ="address"> 4721 NE Columbia Boulevard (503) 282-0029<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
-            <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="DutchBrosSE">
-            <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.SE">
-            <br>
-            <br>
-            <h4>Dutch Bros.</h4>
-            <p class ="address"> 514 SE Belmont Street<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
-            <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="DutchBrosNW">
-            <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.NW">
-            <br>
-            <br>
-            <h4>Dutch Bros.</h4>
-            <p class ="address"> 2110 NW 23rd Avenue (503) 889-0122<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
-            <br>
-            <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="DutchBrosSW">
-            <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.SW">
-            <br>
-            <br>
-            <h4>Dutch Bros.</h4>
-            <p class ="address"> 5852 SW Beaverton Hillsdale Highway (503) 244-7285<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
-            <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="DutchBrosN">
-            <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.N">
-            <br>
-            <br>
-            <h4>Dutch Bros.</h4>
-            <p class ="address"> 5700 E 4th Plain Boulevard <a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
-            <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the “Dutch Mafia”, who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It’s not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It’s a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="Woodlawn">
-            <img src="img/woodlawn-coffee.jpg" alt="Photo of Woodlawn Coffee and Pastry">
-            <br>
-            <br>
-            <h4>Woodlawn Coffee and Pastry</h4>
-            <p class ="address">  808 NE Dekum Street (503) 954-2412<a href="http://www.woodlawncoffee.com/"> woodlawncoffee.com</a></p>
-            <p>Located in a beautiful, century-old building at the burgeoning triple intersection (The Woodlawn Triangle) of Dekum, Durham, and NE 8th Ave, this cozy coffeehouse also makes delicious baked goods uses seasonal, organic ingredients. The interior is warm and old-timey, with wood floors and tables and an oldsaloon-esque bar. They serve stellar local coffee from Coava and Roseline roasters, as well as teas from Tao of Tea. A true neighborhood feel will put you at ease and feel like part of the family.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="Barista">
-            <img src="img/barista.jpg" alt="Photo of Barista">
-            <br>
-            <br>
-            <h4>Barista</h4>
-            <p class ="address"> 1725 NE Alberta Street (503) 208-2568<a href="http://www.baristapdx.com/"> baristapdx.com</a></p>
-            <p>Barista is in the heart of the popular Alberta district of NE Portland, offering carefully prepared and
-              presented coffee drinks from a variety of excellent roasters. The baristas behind the beautiful long bar
-              are top-notch, so you can expect high quality espresso here. The laid back atmosphere is punctuated by
-              the quirky decor that gives the place a 19th century, old-timey feel.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="FreshPot">
-            <img src="img/the-fresh-pot.jpg" alt="Photo of The Fresh Pot">
-            <br>
-            <br>
-            <h4>The Fresh Pot</h4>
-            <p class ="address"> 3729 SE Hawthorne Boulevard (503) 232-8928<a href="http://www.thefreshpot.com/"> thefreshpot.com</a></p>
-            <p>This is a quaint little cafe branch of the local mini-chain featuring loose-leaf teas, WiFi, a small library and local roasts. The fact that it is attached to Powells Books on Hawthorne gives it a classic bookish feel, a place you could hang out and read for awhile. The decor is simple and no-nonsense, with a row of comfy little tables along the wall and a few with a great look out the window for people watching on the busy Hawthorne strip.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="EitherOr">
-            <img src="img/either-or.jpg" alt="Photo of Either/Or">
-            <br>
-            <br>
-            <h4>Either/Or</h4>
-            <p class ="address"> 8235 SE 13th Avenue (503)235-3474<a href=""> </a></p>
-            <p>Either/Or is a bright, cheery little space in the Sellwood neighborhood presenting locally roasted coffee, espresso flights, handmade sodas and pastries. The baristas are some of the best in a city known for its great baristas - this place is highly touted internationally and the baristas have won top awards for their latte art and drink making. Befitting its name, Either/Or offers two daily choices of single-origin espresso from stellar local roasters such as Heart and Roseline, as well as signature, seasonal coffee cocktails. They are also responsible for making the wonderfully spicy Tanglewood chai, which one can find at many                   shops around town. This is a place for the coffee aficionado.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="DragonFly">
-            <img src="img/dragonfly-coffee.jpg" alt="Photo of Dragonfly">
-            <br>
-            <br>
-            <h4>The Dragonfly Coffee House</h4>
-            <p class ="address"> 2387 NW Thurman Street (503) 224-7888<a href="http://thedragonflycoffeehouse.com/"> thedragonflycoffeehouse.com</a></p>
-            <p>Cozy, open-early spot pairing its brews with pastries and more in a low-key space with plush seating, dolls, and pillows. It is a magical atmosphere, full of red, warm hues and lamps, vases, chandeliers, and potted plants. A small library of books, a stack of games and puzzles, and fun art on the walls make it an entertaining place to be. The large LOVE sign behind the bar befits the welcoming vibe of the baristas and in a sense defines this little neighborhood spot.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="Sterling">
-            <img src="img/sterling-coffee.jpg" alt="Photo of Sterling Coffee">
-            <br>
-            <br>
-            <h4>Sterling Coffee Roasters</h4>
-            <p class ="address"> 417 NW 21st Avenue (503) 248-2133<a href="http://www.sterling.coffee/"> sterlingcoffee.com</a></p>
-            <p>This tiny (VERY tiny) coffeehouse in the heart of the bustling Alphabet district features high quality, carefully crafted coffee drinks with their own varying roasts, which include a traditional espresso roast and a rotating single origin offering. The classic decor, with its white table-clothed small tables, small flower arrangements, gilded mirrors, and golden green wallpaper, give this place a European feel, somewhere between France and Italy. Besides the stellar coffee, their hot chocolate, using cocoa made from local artisan chocolate maker Cacao, is the top-rated in town.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="FehrenbacherHof">
-            <img src="img/fehrenbacher-hof.jpg" alt="Photo of Fehrenbacher Hof">
-            <br>
-            <br>
-            <h4>Fehrenbacher Hof</h4>
-            <p class ="address"> 1225 SW 19th Avenue (503) 223-4493<a href="http://goosehollowinn.com/Fehrenbacher%20Hof.html"> goosehollowinn.com</a></p>
-            <p>This family-run coffeehouse in the cute, residential Goose Hollow neighborhood offers breakfast sandwiches and homey touches like plush chairs, couches and chess tables. Located in a beautiful old house, this place is the picture of cozy comfort, with lots of tiny corners to disappear into, as well as a porch where you can relax on warm days. Known by its regularsas'The Hof', it is a hidden gem of Portland.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="HeartRoasters">
-            <img src="img/heart-coffee.jpg" alt="Photo of Heart">
-            <br>
-            <br>
-            <h4>Heart Coffee</h4>
-            <p class ="address"> 537 SW 12th Avenue (503) 224-0036<a href="http://www.heartroasters.com/"> heartroasters.com</a></p>
-            <p>The western outpost of these highly-renowned, innovative local roasters serves top-notch, carefully crafted espresso drinks for the true aficionado. Its industrial-chic quarters are stark but welcoming, and the bar along the window is a great place to sidle up for some laptop work or reading. The bustling indoor atmosphere and high volume music makes the place feel alive, but you can also opt for a quiet, modern designed table outside on the sidewalk. Heart is fast becoming a local landmark in a city renowned for its excellent coffee.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="AnnaBannanas">
-            <img src="img/anna-bannanas.jpg" alt="Photo of Anna Bannanas">
-            <br>
-            <br>
-            <h4>Anna Bannanas Cafe</h4>
-            <p class ="address"> 8716 N Lombard Street (503) 286-2030<a href="http://annabannanascafe.com/"> annabannanascafe.com</a></p>
-            <p>Laid-back is the key word at Anna Bannanas - the sign outside says to come in and “catch a breath”, while the owners are the self-proclaimed “champions of chill”. It’s got an eclectic, bohemian assortment of comfy furniture, with a lived-in quality that is the absolute opposite of industrial-chic. The framed picture of Jerry Garcia is a clue to the old hippie vibe that subtly inhabits the place, as does the whimsical artwork on the old brick walls and the little castle for kids to play in. Though the place is usually crowded, its got a lot of space to accommodate them.
-            </p>
-            <br>
-          </div>
-
-          <div class="coffee_shop" id="Cathedral">
-            <img src="img/cathedral-coffee.jpg" alt="Photo of Cathedral">
-            <br>
-            <br>
-            <h4>Cathedral Coffee</h4>
-            <p class ="address"> 7530 N Willamette Boulevard (503) 935-4312<a href="http://www.cathedralcoffee.com/"> cathedralcoffee.com</a></p>
-            <p>A bit off the beaten path of downtown St Johns, Cathedral Coffee is a hidden gem that serves carefully crafted, beautifully poured espresso drinks and quality coffee. The interior is a combination of simple and bohemian, traditional and modern, hip and down-home. The huge mural depicting graffiti tags and the St Johns bridge anchors them as a solidly neighborhood spot that gives the feeling of being in the heart of St Johns, even if you’re not. The coffee here is top- notch and will impress any aficionado out there - and well worth the trip up north.
-            </p>
-            <br
-          </div>
+    <div id="output">
+      <h2>We Recommend:</h2>
+      <br>
+      <div class="container">
+        <div class="coffee_shop" id="StarbucksNE">
+          <img src="img/starbucks.jpg" alt="Photo of StarbucksNE">
+          <br>
+          <br>
+          <h4>Starbucks</h4>
+          <p class ="address"> 525 NE Grand Avenue (503) 231-2793 <a href="http://www.starbucks.com/store-locator/search/location/525%20ne%20grand/detail/18323/">starbucks.com</a></p>
+          <p>The Seattle-based, omnipresent coffeehouse chain can be credited with starting the trend in the US towards the Italian-style cafe with espresso drinks, way back in 1983. Since that time, there are over 26,000 of these shops around the world, so if consistency is what you are looking for, you will get it at Starbucks, and it will not be hard to find one close by. If you like to dress up your espresso, this is your place, with caramel, whip cream, peppermint, pumpkin, chocolate, and more ready to tantalize your taste buds. When it comes to lavish, decadent lattes, nobody really competes with Starbucks.
+          </p>
+          <br>
         </div>
 
+        <div class="coffee_shop" id="StarbucksSE">
+          <img src="img/starbucks.jpg" alt="Photo of StarbucksSE">
+          <br>
+          <br>
+          <h4>Starbucks</h4>
+          <p class ="address"> 7001 SE Milwaukie Avenue (503) 230-9603 <a href="http://www.starbucks.com/store-locator/search/location/7001%20se%20milwaukie%20avenue/detail/15239">starbucks.com</a></p>
+          <p>The Seattle-based, omnipresent coffeehouse chain can be credited with starting the trend in the US towards the Italian-style cafe with espresso drinks, way back in 1983. Since that time, there are over 26,000 of these shops around the world, so if consistency is what you are looking for, you will get it at Starbucks, and it will not be hard to find one close by. If you like to dress up your espresso, this is your place, with caramel, whip cream, peppermint, pumpkin, chocolate, and more ready to tantalize your taste buds. When it comes to lavish, decadent lattes, nobody really competes with Starbucks.
+          </p>
+          <br>
+        </div>
 
-      </div>  <!-- end output section -->
+        <div class="coffee_shop" id="StarbucksNW">
+          <img src="img/starbucks.jpg" alt="Photo of StarbucksNW">
+          <br>
+          <br>
+          <h4>Starbucks</h4>
+          <p class ="address"> 1301 NW 23rd Avenue (503) 227-2038 <a href="http://www.starbucks.com/store-locator/search/location/1301%20Northwest%2023rd%20Avenue%2C%20Portland%2C%20OR%2C%20United%20States/detail/16874">starbucks.com</a></p>
+          <p>The Seattle-based, omnipresent coffeehouse chain can be credited with starting the trend in the US towards the Italian-style cafe with espresso drinks, way back in 1983. Since that time, there are over 26,000 of these shops around the world, so if consistency is what you are looking for, you will get it at Starbucks, and it will not be hard to find one close by. If you like to dress up your espresso, this is your place, with caramel, whip cream, peppermint, pumpkin, chocolate, and more ready to tantalize your taste buds. When it comes to lavish, decadent lattes, nobody really competes with Starbucks.
+          </p>
+          <br>
+        </div>
 
-    </div>  <!-- end output container -->
+        <div class="coffee_shop" id="StarbucksSW">
+          <img src="img/starbucks.jpg" alt="Photo of StarbucksSW">
+          <br>
+          <br>
+          <h4>Starbucks</h4>
+          <p class ="address"> 720 SW Broadway (503) 223-2488 <a href="http://www.starbucks.com/store-locator/search/location/720%20sw%20broadway%2C%20portland%2C%20or%2097205/detail/9082">starbucks.com</a></p>
+          <p>The Seattle-based, omnipresent coffeehouse chain can be credited with starting the trend in the US towards the Italian-style cafe with espresso drinks, way back in 1983. Since that time, there are over 26,000 of these shops around the world, so if consistency is what you are looking for, you will get it at Starbucks, and it will not be hard to find one close by. If you like to dress up your espresso, this is your place, with caramel, whip cream, peppermint, pumpkin, chocolate, and more ready to tantalize your taste buds. When it comes to lavish, decadent lattes, nobody really competes with Starbucks.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="StarbucksN">
+          <img src="img/starbucks.jpg" alt="Photo of StarbucksN">
+          <br>
+          <br>
+          <h4>Starbucks</h4>
+          <p class ="address"> 8539 N Lombard Street (503) 240-2700 <a href="http://www.starbucks.com/store-locator/search/location/8539%20N%20Lombard%20Street%20/detail/15240">starbucks.com</a></p>
+          <p>The Seattle-based, omnipresent coffeehouse chain can be credited with starting the trend in the US towards the Italian-style cafe with espresso drinks, way back in 1983. Since that time, there are over 26,000 of these shops around the world, so if consistency is what you are looking for, you will get it at Starbucks, and it will not be hard to find one close by. If you like to dress up your espresso, this is your place, with caramel, whip cream, peppermint, pumpkin, chocolate, and more ready to tantalize your taste buds. When it comes to lavish, decadent lattes, nobody really competes with Starbucks.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="DutchBrosNE">
+          <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.NE">
+          <br>
+          <br>
+          <h4>Dutch Bros.</h4>
+          <p class ="address"> 4721 NE Columbia Boulevard (503) 282-0029<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
+          <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="DutchBrosSE">
+          <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.SE">
+          <br>
+          <br>
+          <h4>Dutch Bros.</h4>
+          <p class ="address"> 514 SE Belmont Street<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
+          <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="DutchBrosNW">
+          <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.NW">
+          <br>
+          <br>
+          <h4>Dutch Bros.</h4>
+          <p class ="address"> 2110 NW 23rd Avenue (503) 889-0122<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
+          <br>
+          <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="DutchBrosSW">
+          <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.SW">
+          <br>
+          <br>
+          <h4>Dutch Bros.</h4>
+          <p class ="address"> 5852 SW Beaverton Hillsdale Highway (503) 244-7285<a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
+          <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the 'Dutch Mafia', who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It is not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It is a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.Drive-thru chain known for specialty java and espresso drinks, plus teas and smoothies.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="DutchBrosN">
+          <img src="img/dutch-bros.jpg" alt="Photo of Dutch Bros.N">
+          <br>
+          <br>
+          <h4>Dutch Bros.</h4>
+          <p class ="address"> 5700 E 4th Plain Boulevard <a href="http://www.dutchbros.com/"> dutchbros.com</a></p>
+          <p>This western US chain of drive-through coffee stands, founded in Grants Pass, OR, has a rabid following, often nicknamed the “Dutch Mafia”, who are absolutely wild about the friendly baristas, super-fast service, and fun vibe. It’s not uncommon to hear loyal customers say that their experience at Dutch Bros is the best part of their day because the energy is so positive and up-beat. It’s a young crowd, with a decidedly youthful enthusiasm, but any ages are welcome.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="Woodlawn">
+          <img src="img/woodlawn-coffee.jpg" alt="Photo of Woodlawn Coffee and Pastry">
+          <br>
+          <br>
+          <h4>Woodlawn Coffee and Pastry</h4>
+          <p class ="address">  808 NE Dekum Street (503) 954-2412<a href="http://www.woodlawncoffee.com/"> woodlawncoffee.com</a></p>
+          <p>Located in a beautiful, century-old building at the burgeoning triple intersection (The Woodlawn Triangle) of Dekum, Durham, and NE 8th Ave, this cozy coffeehouse also makes delicious baked goods uses seasonal, organic ingredients. The interior is warm and old-timey, with wood floors and tables and an oldsaloon-esque bar. They serve stellar local coffee from Coava and Roseline roasters, as well as teas from Tao of Tea. A true neighborhood feel will put you at ease and feel like part of the family.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="Barista">
+          <img src="img/barista.jpg" alt="Photo of Barista">
+          <br>
+          <br>
+          <h4>Barista</h4>
+          <p class ="address"> 1725 NE Alberta Street (503) 208-2568<a href="http://www.baristapdx.com/"> baristapdx.com</a></p>
+          <p>Barista is in the heart of the popular Alberta district of NE Portland, offering carefully prepared and
+            presented coffee drinks from a variety of excellent roasters. The baristas behind the beautiful long bar
+            are top-notch, so you can expect high quality espresso here. The laid back atmosphere is punctuated by
+            the quirky decor that gives the place a 19th century, old-timey feel.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="FreshPot">
+          <img src="img/the-fresh-pot.jpg" alt="Photo of The Fresh Pot">
+          <br>
+          <br>
+          <h4>The Fresh Pot</h4>
+          <p class ="address"> 3729 SE Hawthorne Boulevard (503) 232-8928<a href="http://www.thefreshpot.com/"> thefreshpot.com</a></p>
+          <p>This is a quaint little cafe branch of the local mini-chain featuring loose-leaf teas, WiFi, a small library and local roasts. The fact that it is attached to Powells Books on Hawthorne gives it a classic bookish feel, a place you could hang out and read for awhile. The decor is simple and no-nonsense, with a row of comfy little tables along the wall and a few with a great look out the window for people watching on the busy Hawthorne strip.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="EitherOr">
+          <img src="img/either-or.jpg" alt="Photo of Either/Or">
+          <br>
+          <br>
+          <h4>Either/Or</h4>
+          <p class ="address"> 8235 SE 13th Avenue (503)235-3474<a href=""> </a></p>
+          <p>Either/Or is a bright, cheery little space in the Sellwood neighborhood presenting locally roasted coffee, espresso flights, handmade sodas and pastries. The baristas are some of the best in a city known for its great baristas - this place is highly touted internationally and the baristas have won top awards for their latte art and drink making. Befitting its name, Either/Or offers two daily choices of single-origin espresso from stellar local roasters such as Heart and Roseline, as well as signature, seasonal coffee cocktails. They are also responsible for making the wonderfully spicy Tanglewood chai, which one can find at many                   shops around town. This is a place for the coffee aficionado.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="DragonFly">
+          <img src="img/dragonfly-coffee.jpg" alt="Photo of Dragonfly">
+          <br>
+          <br>
+          <h4>The Dragonfly Coffee House</h4>
+          <p class ="address"> 2387 NW Thurman Street (503) 224-7888<a href="http://thedragonflycoffeehouse.com/"> thedragonflycoffeehouse.com</a></p>
+          <p>Cozy, open-early spot pairing its brews with pastries and more in a low-key space with plush seating, dolls, and pillows. It is a magical atmosphere, full of red, warm hues and lamps, vases, chandeliers, and potted plants. A small library of books, a stack of games and puzzles, and fun art on the walls make it an entertaining place to be. The large LOVE sign behind the bar befits the welcoming vibe of the baristas and in a sense defines this little neighborhood spot.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="Sterling">
+          <img src="img/sterling-coffee.jpg" alt="Photo of Sterling Coffee">
+          <br>
+          <br>
+          <h4>Sterling Coffee Roasters</h4>
+          <p class ="address"> 417 NW 21st Avenue (503) 248-2133<a href="http://www.sterling.coffee/"> sterlingcoffee.com</a></p>
+          <p>This tiny (VERY tiny) coffeehouse in the heart of the bustling Alphabet district features high quality, carefully crafted coffee drinks with their own varying roasts, which include a traditional espresso roast and a rotating single origin offering. The classic decor, with its white table-clothed small tables, small flower arrangements, gilded mirrors, and golden green wallpaper, give this place a European feel, somewhere between France and Italy. Besides the stellar coffee, their hot chocolate, using cocoa made from local artisan chocolate maker Cacao, is the top-rated in town.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="FehrenbacherHof">
+          <img src="img/fehrenbacher-hof.jpg" alt="Photo of Fehrenbacher Hof">
+          <br>
+          <br>
+          <h4>Fehrenbacher Hof</h4>
+          <p class ="address"> 1225 SW 19th Avenue (503) 223-4493<a href="http://goosehollowinn.com/Fehrenbacher%20Hof.html"> goosehollowinn.com</a></p>
+          <p>This family-run coffeehouse in the cute, residential Goose Hollow neighborhood offers breakfast sandwiches and homey touches like plush chairs, couches and chess tables. Located in a beautiful old house, this place is the picture of cozy comfort, with lots of tiny corners to disappear into, as well as a porch where you can relax on warm days. Known by its regularsas'The Hof', it is a hidden gem of Portland.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="HeartRoasters">
+          <img src="img/heart-coffee.jpg" alt="Photo of Heart">
+          <br>
+          <br>
+          <h4>Heart Coffee</h4>
+          <p class ="address"> 537 SW 12th Avenue (503) 224-0036<a href="http://www.heartroasters.com/"> heartroasters.com</a></p>
+          <p>The western outpost of these highly-renowned, innovative local roasters serves top-notch, carefully crafted espresso drinks for the true aficionado. Its industrial-chic quarters are stark but welcoming, and the bar along the window is a great place to sidle up for some laptop work or reading. The bustling indoor atmosphere and high volume music makes the place feel alive, but you can also opt for a quiet, modern designed table outside on the sidewalk. Heart is fast becoming a local landmark in a city renowned for its excellent coffee.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="AnnaBannanas">
+          <img src="img/anna-bannanas.jpg" alt="Photo of Anna Bannanas">
+          <br>
+          <br>
+          <h4>Anna Bannanas Cafe</h4>
+          <p class ="address"> 8716 N Lombard Street (503) 286-2030<a href="http://annabannanascafe.com/"> annabannanascafe.com</a></p>
+          <p>Laid-back is the key word at Anna Bannanas - the sign outside says to come in and “catch a breath”, while the owners are the self-proclaimed “champions of chill”. It’s got an eclectic, bohemian assortment of comfy furniture, with a lived-in quality that is the absolute opposite of industrial-chic. The framed picture of Jerry Garcia is a clue to the old hippie vibe that subtly inhabits the place, as does the whimsical artwork on the old brick walls and the little castle for kids to play in. Though the place is usually crowded, its got a lot of space to accommodate them.
+          </p>
+          <br>
+        </div>
+
+        <div class="coffee_shop" id="Cathedral">
+          <img src="img/cathedral-coffee.jpg" alt="Photo of Cathedral">
+          <br>
+          <br>
+          <h4>Cathedral Coffee</h4>
+          <p class ="address"> 7530 N Willamette Boulevard (503) 935-4312<a href="http://www.cathedralcoffee.com/"> cathedralcoffee.com</a></p>
+          <p>A bit off the beaten path of downtown St Johns, Cathedral Coffee is a hidden gem that serves carefully crafted, beautifully poured espresso drinks and quality coffee. The interior is a combination of simple and bohemian, traditional and modern, hip and down-home. The huge mural depicting graffiti tags and the St Johns bridge anchors them as a solidly neighborhood spot that gives the feeling of being in the heart of St Johns, even if you’re not. The coffee here is top- notch and will impress any aficionado out there - and well worth the trip up north.
+          </p>
+          <br
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>  <!-- end output section -->
+
   </body>
 </html>

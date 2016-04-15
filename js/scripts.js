@@ -154,48 +154,25 @@ $(document).ready(function(){
       };
     });
 
-// [starb, dutch, woodl, baris, drago, sterl, annab, cathe, fresh, eithe, fehre, heart];
-
-console.log(woodl.count);
-console.log(baris.count);
-console.log(drago.count);
-console.log(sterl.count);
-console.log(annab.count);
-console.log(cathe.count);
-console.log(fresh.count);
-console.log(eithe.count);
-console.log(fehre.count);
-console.log(heart.count);
-
     var outputStores = [];
     var highestCount = 0;
-console.log(highestCount);
 
     stores.forEach(function(store) {
-    if (store.loca === userCoffee.loca){
-      if (store.count >= highestCount) {
+      if (store.loca === userCoffee.loca){
+        if (store.count >= highestCount) {
         highestCount = store.count;
+        }
       }
-    }
-  });
-console.log(highestCount);
+    });
 
-  stores.forEach(function(store) {
-    if (store.count === highestCount && store.loca === userCoffee.loca) {
-      outputStores.push(store.name);
-    }
-    // if (store.count === highestCount && store.loca === "6") {
-    //   outputStores.push(store.name);
-    // }
-  });
-console.log(outputStores);
-
-
-
+    stores.forEach(function(store) {
+      if (store.count === highestCount && store.loca === userCoffee.loca) {
+        outputStores.push(store.name);
+      }
+    });
 
     $("#collect").slideUp("slow");
-        $("#goldilocks").fadeOut(); 
-
+    $("#goldilocks").fadeOut();
     $("#output").fadeIn("slow");
 
     // if (outputStores[0] === "Starbucks"){
