@@ -1,29 +1,30 @@
 #goldilocks {
   background-image: url(../img/latte_art.gif);
-  height: 150px;
+  height: 250px;
   background-repeat: no-repeat;
   background-position: left;
   background-color: #1a0a00;
   box-shadow: 10px 0px 10px 10px #1a0a00;
 }
 
+#line-two {
+  /*padding-left: 5px;*/
+  color: #cc5200;
+  font-family: Yanone Kaffeesatz;
+  font-size: 400%;
+  float: right;
+  text-shadow: 2px 2px #ff9933;
+  margin-right: 10%;
+}
+
 h3 {
-  /*float: left;*/
+  float: left;
   /*margin: 45px;
   padding-top: 20px;*/
   color: #cc5200;
   font-family: Yanone Kaffeesatz;
   font-size: 24pt;
-  padding-left: 8%;
   text-shadow: 2px 2px white;
-}
-
-#line-two {
-  padding-left: 5px;
-  padding-top: 20px;
-  color: #cc5200;
-  font-family: Yanone Kaffeesatz;
-  font-size: 30pt;
 }
 
 .address {
@@ -43,16 +44,20 @@ p {
   color: white;
 }
 
-#line-two {
-  float: right;
-  margin-right: 10%;
-}
-
 h1 {
-  font-size: 50px;
+  font-family: Yanone Kaffeesatz;
+  font-size: 900%;
   text-align: center;
+  color: #cc5200;
 }
 
+.cursive {
+  font-family: Lobster;
+  font-size: 100%;
+  text-align: center;
+  color: #cc5200;
+  text-shadow: 2px 2px #ff9933;
+}
 #collect {
   /*transition-duration: 50s;*/
   transition: opacity 0.5s;
@@ -74,17 +79,26 @@ h1 {
   color: white;
 }
 
-label {
+.drop-down label {
   color: #cc5200;
+  font-size: 120%;
+  text-shadow: 1px 1px white;
+}
+
+.radio label {
+  color: #cc5200;
+  font-size: 100%;
+  text-shadow: 1px 1px white;
+}
+
+.col-sm-9 {
   float: left;
 }
 
-/*.col-sm-5 {
-  float: left;
-}*/
-
 strong {
   color: #cc5200;
+  font-size: 120%;
+  text-shadow: 1px 1px white;
 }
 
 input[type=radio] {

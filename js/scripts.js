@@ -53,6 +53,9 @@ function Coffee (name, ambi, conv, culi, cons, wait, wifi, pric, flav, loca, cou
 // User Interface Logic
 $(document).ready(function(){
 
+  var audio = new Audio("audio/background.mp3");
+  audio.play();
+
   // var ambiance;
   // var convenient;
   // var culinary;
@@ -90,6 +93,10 @@ $(document).ready(function(){
     //
     // set(); // collects user inputs. import() represent string numbers
     //
+
+    var audio2 = new Audio("audio/milk-frothing.mp3");
+    audio2.play();
+
     var importAmbi = $("#ambience").val();
     var importConv = $("input:radio[name=convenient]:checked").val();
     var importCuli = $("#culinary").val();
