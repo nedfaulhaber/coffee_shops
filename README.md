@@ -11,8 +11,9 @@ _This is a coffee finder web application. A form prompts the user to make choice
 ## Setup/Installation Requirements
 
 * _Clone the repository_
+* _Open the file and run index.html_
 * _Turn up the volume of your device to hear the audio component_
-* _
+
 
 ## Known Bugs
 
