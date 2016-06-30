@@ -34,4 +34,4 @@ _{HTML, CSS, Javascript, Google Maps API, mp3}_
 
 *{This software is licensed under MIT}*
 
-Copyright (c) 2015 **_{List of contributors or company name}_**
+Copyright (c) 2016 **_{Gigi Ditz, Ned Faulhaber, Lilo Onwuzu, In Mahaphol}_**
